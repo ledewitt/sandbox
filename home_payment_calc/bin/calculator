@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby -w
+
+require_relative "../lib/home_payment_calc.rb"
+
+HomePaymentCalculator::Calculator.new.start
