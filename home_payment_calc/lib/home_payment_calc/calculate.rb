@@ -9,25 +9,21 @@ module HomePaymentCalculator
     @bi_weekly_rate = annual_rate / 26
     @remaining_principle = principle
     
-    puts @principle
-    puts @months
-    puts @monthly_int_rate
-    puts @half_monthly_int_rate
-    puts @bi_weekly_rate
+    puts "Principle #{@principle}"
+    puts "Months #{@months}"
+    puts "Monthly Interest Rate #{@monthly_int_rate}"
+    puts "Twice a month interest rate #{@half_monthly_int_rate}"
+    puts "Biweekly interest rate #{@bi_weekly_rate}"
   end
   
   def monthly_payment_information
+  
     colculated_payment = @principal * ( @monthly_int_rate / ( 1 - ((1 + @monthly_int_rate )**-@months)))
-  end
-  
-  def monthly_interest
     calculated_monthly_interest = @monthly_int_rate * @remaining_principle
+    calculated_monthly_principle = 42
+    
   end
-  
-  def monthly_principle
-    calculated_monthly_principle = 
-  end
-  
+    
   def loans_remaining_principle
     
   end
