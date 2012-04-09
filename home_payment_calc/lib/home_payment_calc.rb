@@ -1,1 +1,2 @@
-require_relative "home_payment_calc/calculator.rb"
+require_relative "home_payment_calc/calculator"
+require_relative "home_payment_calc/calculate"

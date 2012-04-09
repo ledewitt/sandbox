@@ -3,20 +3,22 @@ module HomePaymentCalculator
     
     def initialize
       
-      puts "Enter the loan amount: "
-      @loan = gets.strip
+      puts "Enter the principle loan amount: "
+      @principle = gets.strip
       
-      puts"Enter the interest rate: "
-      @rate = gets.strip
+      puts"Enter the annual interest rate: "
+      @annual_rate = gets.strip
       
-      puts "Enter the length of the loan in months: "
-      @months = gets.strip
+      puts "Enter the length of the loan in years: "
+      @years = gets.strip
       
     end
-  end
   
-  def start
-    puts "You Entered: Loan - #{@loan}, Rate - #{@rate}, Months - #{@months}"
-  end
-    
+  
+    def start
+      puts "You Entered: Principle - #{@principle}, Annual Rate - #{@annual_rate}, Years - #{@years}"
+      # new.calculate(@principle, @annual_rate, @years)
+    end
+  
+  end 
 end
