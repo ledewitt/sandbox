@@ -1,7 +1,7 @@
 require "home_payment_calc/calculator"
 
-describe Mcal::Calculator do
-  let(:calc) { Mcal::Calculator.new(250_000, 0.05, 30) }
+describe HomePaymentCalculator::Calculator do
+  let(:calc) { HomePaymentCalculator::Calculate.new(250_000, 0.05, 30) }
   let(:delta) { 0.00001 }
   
   it "calculates monthly interest" do
