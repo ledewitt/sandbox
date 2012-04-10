@@ -14,6 +14,6 @@ describe HomePaymentCalculator::Calculator do
   end
 
   it "calculates biweekly interest" do
-    calc.bi_weekly_rate.should be_within(delta).of(0.00173077)
+    calc.bi_weekly_rate.should be_within(delta).of(0.0019230769)
   end
 end

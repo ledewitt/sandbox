@@ -5,10 +5,10 @@ module HomePaymentCalculator
     @principle              = principle
     @annual_rate            = annual_rate
     @years                  = years
-    @months                 = months(@years)
-    @monthly_int_rate       = monthly_int_rate(@annual_rate)
-    @twice_monthly_int_rate = twice_monthly_int_rate(@monthly_int_rate)
-    @bi_weekly_rate         = bi_weekly_rate(@annual_rate)
+    @months                 = months
+    @monthly_int_rate       = monthly_int_rate
+    @twice_monthly_int_rate = twice_monthly_int_rate
+    @bi_weekly_rate         = bi_weekly_rate
     @remaining_principle    = @principle
     
     puts "Principle #{@principle}"
@@ -18,20 +18,20 @@ module HomePaymentCalculator
     puts "Biweekly interest rate #{@bi_weekly_rate}"
   end
   
-  def months (years)
-    years * 12
+  def months
+    @years * 12
   end
 
-  def monthly_int_rate(annual_rate)
-    annual_rate / 12
+  def monthly_int_rate
+    @annual_rate / 12
   end
   
-  def twice_monthly_int_rate(monthly_int_rate)
-    monthly_int_rate / 2
+  def twice_monthly_int_rate
+    @monthly_int_rate / 2
   end
   
-  def bi_weekly_rate(annual_rate)
-    annual_rate / 26    
+  def bi_weekly_rate
+    @annual_rate / 26    
   end
 
   
