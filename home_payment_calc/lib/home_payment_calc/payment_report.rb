@@ -1,12 +1,22 @@
 module HomePaymentCalculator
   class Payment_Report
+    include Enumerable
     
-    def initialize
-      @loan = Calculator.new(250000, 0.05, 30)
+    def initialize(calculator)
+      @calculator=calculator
     end
     
-    def monthly_payment
-      puts "Monthly principle #{@loan.monthly_prin_payment}; Monthly interest #{@loan.monthly_int_payment}"
+    attr_reader :calculator
+    
+    def monthly_payment(month)
+      interest, principle = calculator.interest_and_principle_for_month(month)
     end
+    
+    def each
+      (1..calculator.months).each do |month|
+        yield monthly_payment(month)
+        #following code to be deleted 
+    end
+    
   end
 end
