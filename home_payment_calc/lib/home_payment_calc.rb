@@ -1,2 +1,2 @@
 require_relative "home_payment_calc/calculator"
-require_relative "home_payment_calc/calculate"
+require_relative "home_payment_calc/payment_report"

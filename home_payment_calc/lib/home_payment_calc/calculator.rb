@@ -23,6 +23,7 @@ module HomePaymentCalculator
     puts "Biweekly payment is #{@biweekly_payment}"    
   end
   
+  # Should be private only used by systems intialization.
   def months
     @years * 12
   end
@@ -50,6 +51,18 @@ module HomePaymentCalculator
   def biweekly_payment
     @principle * ( @biweekly_int_rate / ( 1 - ((1 + @biweekly_int_rate )**-@num_biweekly_payments)))
   end
+
+  # The payments
+  
+  def monthly_int_payment(loan)
+    
+  end
+  
+  def monthy_prin_payment(loan)
+  
+  end
+  
+  monthly_int_payment
 
   # def twice_monthly_payment
   #     
