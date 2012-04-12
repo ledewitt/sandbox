@@ -55,15 +55,13 @@ module HomePaymentCalculator
   # The payments
   
   def monthly_int_payment(loan)
-    
+    puts "Monthly_int_payment"
   end
   
   def monthy_prin_payment(loan)
-  
+    put "Monthly_prin_payment"
   end
   
-  monthly_int_payment
-
   # def twice_monthly_payment
   #     
   # end

@@ -2,4 +2,4 @@
 
 require_relative "../lib/home_payment_calc.rb"
 
-HomePaymentCalculator::Calculator.new.start
+HomePaymentCalculator::Payment_Report.new.start
