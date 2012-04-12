@@ -1,8 +1,7 @@
 require "home_payment_calc/calculator"
-require "home_payment_calc/calculate"
 
 describe HomePaymentCalculator::Calculator do
-  let(:calc) { HomePaymentCalculator::Calculate.new(250_000, 0.05, 30) }
+  let(:calc) { HomePaymentCalculator::Calculator.new(250_000, 0.05, 30) }
   let(:delta) { 0.00001 }
   let(:money_delta) { 0.01 }
   
