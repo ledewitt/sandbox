@@ -24,4 +24,16 @@ describe HomePaymentCalculator::Calculator do
   it "calculates biweekly payment" do
     calc.biweekly_payment.should be_within(money_delta).of(619.11)
   end  
+  
+  it "knows the number of months" do
+    calc.months.should eq(360)
+  end
+  
+  it "calculates interest by month" do
+    calc.interest_for_month(1).should  be_within(money_delta).of(1_041.67)
+    calc.interest_for_month(2).should  be_within(money_delta).of(1_040.42)
+    calc.interest_for_month(10).should be_within(money_delta).of(1_030.21)
+  end
+  
+  # ...
 end

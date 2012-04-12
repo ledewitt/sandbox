@@ -2,7 +2,7 @@ module HomePaymentCalculator
   class Payment_Report
     
     def initialize
-      @loan = calculator.new(250000, 0.05, 30)
+      @loan = Calculator.new(250000, 0.05, 30)
     end
     
     def monthly_payment
