@@ -5,9 +5,9 @@
 
 class Article
 
-  def initialize ( title, body )
+  def initialize ( title )
     @title = title
-    @body  = body
+    @body  = File.read("./articles/#{title}")
   end
   
   attr_reader :title, :body

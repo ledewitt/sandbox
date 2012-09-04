@@ -1,4 +1,4 @@
-require_relative "article.rb"
+require_relative "article"
 
 class ArticleList
 
@@ -7,7 +7,7 @@ class ArticleList
 
     Dir.foreach ("./articles/") do |file|
       if file.include?(".txt")
-        article = Article.new( "#{file}",
+        article = Article.new( "#{File.basename(file, ".txt")}",
                                File.read("./articles/#{file}") )
       
         @article_list << article
