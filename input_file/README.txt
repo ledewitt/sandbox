@@ -1,1 +1,0 @@
-Using Ruby to input and output files into various types of Ruby objects.

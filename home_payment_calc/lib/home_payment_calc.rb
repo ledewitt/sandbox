@@ -1,3 +1,0 @@
-require_relative "home_payment_calc/calculator"
-require_relative "home_payment_calc/payment_report"
-require_relative "home_payment_calc/sand_bar_graph"
