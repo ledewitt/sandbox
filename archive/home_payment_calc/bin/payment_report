@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby -w
+
+require_relative "../lib/home_payment_calc"
+
+calculator = HomePaymentCalculator::Calculator.new( ARGV[0].to_f,
+                                                    ARGV[1].to_f,
+                                                    ARGV[2].to_i )
+
+report     = HomePaymentCalculator::Payment_Report.new(calculator)
+
+report.each_with_index do |i|
+  puts "%3d: %s" % [i + 1]
+end
