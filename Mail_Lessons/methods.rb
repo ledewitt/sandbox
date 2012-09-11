@@ -34,3 +34,5 @@ def needs_some_args(a,b,c=nill)
 end
 
 p args = [1,2]
+
+needs_some_args(args)
