@@ -7,8 +7,19 @@ module Clock
       p "I have #{@user}"
     end
     
+    attr_reader :user
+    
+    def format_time(t)
+      t.strftime("%I:%M%P")
+    end
+    
+    def format_date(t)
+      t.strftime("%m/%d/%Y")
+    end
+    
     def punch_in
-      p "#{@user} punches in at #{Time.now}"
+      Time.now
+      # Write to the time card should I pass in project here?
     end
     
     def punch_out

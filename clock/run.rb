@@ -3,6 +3,12 @@ require_relative 'lib/clock/time_card.rb'
 
 user = "ldewitt"
 
-new_clock = Clock::TimeClock.new(user)
+clock = Clock::TimeClock.new(user)
 
-new_clock.punch_in
+t = clock.punch_in
+
+p "#{clock.user} checked in at #{clock.format_time(t)} on #{clock.format_date(t)}"
+
+epoch = t.to_i
+
+p "#{epoch}"
