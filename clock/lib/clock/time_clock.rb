@@ -1,3 +1,5 @@
+require_relative 'time_card.rb'
+
 module Clock
   class TimeClock
     
