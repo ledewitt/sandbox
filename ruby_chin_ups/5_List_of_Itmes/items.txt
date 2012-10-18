@@ -1,0 +1,10 @@
+Apples, 5.99
+Bananas, 4.29
+Peaches, 3.41
+Pumpkin, 7.62
+Pears, 2.99
+Saffron, 12.99
+Cinnamon, 7.43
+Ginger, 1.28
+Onions, 6.29
+Cucumber, 8.01
