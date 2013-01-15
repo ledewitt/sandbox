@@ -15,6 +15,11 @@ module PointCount
       p @deck
     end
   
+    def random_card
+      size = @deck.size
+      @deck[rand(size)]
+    end
+  
     def talk
       "Sorry I can't do that Dave!"
     end
