@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/deck_builder'
+
+deck = DeckBuilder::Deck.new

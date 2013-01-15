@@ -9,7 +9,9 @@ class Calculator
   end
   
   def subtraction
-    @stack << @stack.pop - @stack.pop
+    right = @stack.pop
+    left  = @stack.pop
+    @stack << left - right
   end
 
   def multiplication
@@ -17,7 +19,9 @@ class Calculator
   end
   
   def division
-    @stack << @stack.pop / @stack.pop
+    right = @stack.pop
+    left  = @stack.pop
+    @stack << left / right
   end
 
   def command(input)
