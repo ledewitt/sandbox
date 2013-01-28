@@ -10,8 +10,11 @@ module PointCount
      @west  = [ ]
    end
    
-   def deal(deck)
+   def riffle(deck)
      deck.shuffle
+   end
+   
+   def deal(deck)
      @north = deck.pop(13)
      @east  = deck.pop(13)
      @south = deck.pop(13)
