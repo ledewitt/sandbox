@@ -27,7 +27,7 @@ module PointCount
     def random_card
       # @deck[1].rank
       size = @deck.size
-      "#{@deck[rand(size)].rank.strip} #{@deck[rand(size)].suit.strip}"
+      "#{@deck[rand(size)].rank} #{@deck[rand(size)].suit}"
     end
     
     def shuffle

@@ -3,6 +3,13 @@ module PointCount
    
    attr_reader :north, :east, :south, :west
    
+   def initialize
+     @north = [ ]
+     @east  = [ ]
+     @south = [ ]
+     @west  = [ ]
+   end
+   
    def deal(deck)
      deck.shuffle
      @north = deck.pop(13)
