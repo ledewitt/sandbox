@@ -1,4 +1,4 @@
-require_relative "./card"
+require_relative "card"
 
 module PointCount
   class Deck
@@ -9,6 +9,8 @@ module PointCount
         f.each do |suit|
           open(File.join(File.dirname(__FILE__), *%w[.. .. data ranks.dat])) do |g|
             g.each do |rank|
+              suit = suit.delete("\n")
+              rank = rank.delete("\n")
               card = PointCount::Card.new(suit,rank)
               @deck << card
             end
@@ -26,6 +28,10 @@ module PointCount
       # @deck[1].rank
       size = @deck.size
       "#{@deck[rand(size)].rank.strip} #{@deck[rand(size)].suit.strip}"
+    end
+    
+    def shuffle
+      @deck.shuffle
     end
     
     def talk
