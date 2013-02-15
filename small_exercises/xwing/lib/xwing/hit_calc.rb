@@ -25,9 +25,9 @@ module Xwing
 
     def attack
       puts "Number of attack dice?"
-      attack_dice = gets.strip.to_i
+      attack_dice = Integer(gets) rescue 1
       puts "Number of defence dice?"
-      defence_dice = gets.strip.to_i
+      defence_dice = Integer(gets) rescue 1
       # puts "Attack dice #{attack_dice}, Defence Dice #{defence_dice}"
       puts "Attack Result - #{@dice.attack(attack_dice)}"
       puts "Defence Result - #{@dice.defend(defence_dice)}"
