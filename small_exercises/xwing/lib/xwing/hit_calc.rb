@@ -2,13 +2,12 @@ module Xwing
   class HitCalc
     
     def initialize
-
+      @dice = Dice.new
     end
 
     def event
       attack
       while response = gets.strip
-        puts "Do you want another attack roll? Y/N"
         interpret(response)
       end
     end
@@ -18,14 +17,21 @@ module Xwing
       when 'N','n'
         exit
       when 'Y','y'
-        puts "Blasted Biggs where are you?"
+        attack
       else
         puts "The force will be with you always, I just don't understand the command!"
       end
     end
 
     def attack
-      puts "Set up for your attack run."
+      puts "Number of attack dice?"
+      attack_dice = gets.strip.to_i
+      puts "Number of defence dice?"
+      defence_dice = gets.strip.to_i
+      # puts "Attack dice #{attack_dice}, Defence Dice #{defence_dice}"
+      puts "Attack Result - #{@dice.attack(attack_dice)}"
+      puts "Defence Result - #{@dice.defend(defence_dice)}"
+      puts "Do you want another attack roll? Y/N"
     end
 
   end

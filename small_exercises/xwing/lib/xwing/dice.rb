@@ -8,12 +8,12 @@ module Xwing
       @defence_die = [ "blank", "blank", "blank", "evade", "evade", "evade", "foucs", "focus" ]
     end
 
-    def attack(number_dice)
-      @attack_die.sample(number_dice=1)      
+    def attack(number_dice=1)
+      @attack_die.sample(number_dice)      
     end
 
-    def defend(number_dice)
-      @defence_die.sample(number_dice=1)
+    def defend(number_dice=1)
+      @defence_die.sample(number_dice)
     end
 
   end
