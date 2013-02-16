@@ -2,7 +2,9 @@ module Xwing
   class HitCalc
     
     def initialize
-      @dice = Dice.new
+      @dice          = Dice.new
+      @attack_array  = [ ]
+      @defence_array = [ ] 
     end
 
     def event
@@ -28,10 +30,25 @@ module Xwing
       attack_dice = Integer(gets) rescue 1
       puts "Number of defence dice?"
       defence_dice = Integer(gets) rescue 1
-      # puts "Attack dice #{attack_dice}, Defence Dice #{defence_dice}"
-      puts "Attack Result - #{@dice.attack(attack_dice)}"
-      puts "Defence Result - #{@dice.defend(defence_dice)}"
+      
+      @attack_array = @dice.attack(attack_dice)
+      @defence_array = @dice.defend(defence_dice)
+      
+      puts "Attack Dice Results - #{@attack_array}"
+      puts "Defence Dice Results - #{@defence_array}"
+      
+      evalute
+      
       puts "Do you want another attack roll? Y/N"
+    end
+    
+    def evalute
+      hit_count = @attack_array.count{ |r| r=="hit" || r=="crit" }
+      puts "Number of hits #{hit_count}"
+      evade_count = @defence_array.count("evade")
+      puts "Number of evades #{evade_count}"
+      total_hits = hit_count - evade_count > 0 ? hit_count - evade_count : 0
+      puts "Total hits taken #{total_hits}"
     end
 
   end
