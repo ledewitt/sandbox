@@ -20,9 +20,15 @@ module Xwing
         exit
       when 'Y','y'
         attack
+      when 'M'
+        monte
       else
         puts "The force will be with you always, I just don't understand the command!"
       end
+    end
+    
+    def monte
+      
     end
 
     def attack
