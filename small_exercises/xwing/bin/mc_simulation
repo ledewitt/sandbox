@@ -2,4 +2,4 @@
 
 require_relative "../lib/xwing.rb"
 
-Xwing::TextInterface.new.event
+Xwing::TextInterface.new.simulation

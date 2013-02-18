@@ -1,0 +1,9 @@
+In bin need two different calls to run a single attack and one to run a Monte Carlo simulation.
+
+Use the text_interface for these launched scripts.
+
+Need to make sure that the calculators and dice are independent of the text report calculator so that when the website reports are created there are less problems with implementation.
+
+Implement logic of canceling hits with evades first before crits.
+
+RSPEC to verify calculators are working correctly.

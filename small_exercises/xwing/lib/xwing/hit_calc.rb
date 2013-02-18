@@ -7,7 +7,7 @@ module Xwing
       @defence_array = [ ] 
     end
 
-    def event
+    def single_attack
       attack
       while response = gets.strip
         interpret(response)
