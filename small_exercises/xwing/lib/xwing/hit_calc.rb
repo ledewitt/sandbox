@@ -53,7 +53,7 @@ module Xwing
       puts "Number of hits #{hit_count}"
       evade_count = @defence_array.count("evade")
       puts "Number of evades #{evade_count}"
-      total_hits = hit_count - evade_count > 0 ? hit_count - evade_count : 0
+      total_hits = [ hit_count - evade_count, 0 ].max
       puts "Total hits taken #{total_hits}"
     end
 
