@@ -4,8 +4,7 @@ module Xwing
       @dice          = Dice.new
       @attack_array  = [ ]
       @defence_array = [ ]
-      @hits          = 0
-      @crits         = 0
+      @sim_hits      = 0
       @trials        = 0
     end
     
@@ -17,33 +16,35 @@ module Xwing
       puts "Number of trials?"
       @trials = Integer(gets) rescue 1
       
-      @trials.times do
+      @trials.times do |t|
         @attack_array = @dice.attack(attack_dice)
         @defence_array = @dice.defend(defence_dice)
       
         puts "Attack Dice Results - #{@attack_array}"
         puts "Defence Dice Results - #{@defence_array}"
       
-        evalute
+        evalute(t)
       end
       
-      average_hits = @hits/@trials.to_f
+      average_hits = @sim_hits/@trials.to_f
       
-      puts "Total number of hits - #{@hits}"
+      puts "Total number of hits - #{@sim_hits}"
       puts "Total number of trails - #{@trials}"
       puts "Average number of hits - #{average_hits}"
       
       puts "Do you want another attack roll? Y/N"      
     end
     
-    def evalute
+    def evalute(t)
       hit_count = @attack_array.count{ |r| r=="hit" || r=="crit" }
       puts "Number of hits #{hit_count}"
       evade_count = @defence_array.count("evade")
       puts "Number of evades #{evade_count}"
       total_hits = [ hit_count - evade_count, 0 ].max
       puts "Total hits taken #{total_hits}"
-      @hits += total_hits
+      @sim_hits += total_hits
+      puts "Total Simulator Hits #{@sim_hits}"
+      puts "Trial Number: #{t+1}"
     end
   end
 end
