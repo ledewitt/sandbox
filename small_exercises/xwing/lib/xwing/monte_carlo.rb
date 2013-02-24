@@ -8,6 +8,28 @@ module Xwing
       @trials        = 0
     end
     
+    def start
+      simulation
+      while response = gets.strip
+        interpret(response)
+      end
+    end
+    
+    def interpret(response)
+      case response
+      when 'N','n'
+        exit
+      when 'Y','y'
+        @attack_array  = [ ]
+        @defence_array = [ ]
+        @sim_hits      = 0
+        @trials        = 0
+        simulation
+      else
+        puts "The force will be with you always, I just don't understand the command!"
+      end
+    end
+    
     def simulation
       puts "Number of attack dice?"
       attack_dice = Integer(gets) rescue 1

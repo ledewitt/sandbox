@@ -9,11 +9,25 @@ module Xwing
     end
 
     def attack(number_dice=1)
-      @attack_die.sample(number_dice)      
+      # @attack_die.sample(number_dice)
+      result = [ ]
+      
+      number_dice.times do
+        result << @attack_die.fetch(rand(@attack_die.count))
+      end
+      
+      result
     end
 
     def defend(number_dice=1)
-      @defence_die.sample(number_dice)
+      # @defence_die.sample(number_dice)
+      result = [ ]
+      
+      number_dice.times do
+        result << @defence_die.fetch(rand(@defence_die.count))
+      end
+      
+      result
     end
 
   end
