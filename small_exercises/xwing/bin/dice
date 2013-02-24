@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby -w
+
+require_relative "../lib/xwing.rb"
+
+Xwing::DiceCheck.new.attack
+Xwing::DiceCheck.new.defend
