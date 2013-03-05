@@ -1,0 +1,26 @@
+require          'bundler/setup'
+require          'sinatra'
+require          'sinatra/activerecord/rake'
+require          'json'
+require          'pp'
+# require_relative 'config/database'
+
+desc "Launch a console with our environment loaded"
+task :console do
+  require          'irb'
+  require_relative 'lib/blog'
+  ARGV.clear
+  $PROGRAM_NAME = 'irb'
+  IRB.start
+end
+
+task :parser do
+  json = File.read('data/employees.json')
+  empls = JSON.parse(json)
+
+  pp empls
+  
+  pp "The CFO is: #{empls["CFO"]}"
+  
+  pp "The people in HR are: #{empls["Human Resources"]}"
+end
