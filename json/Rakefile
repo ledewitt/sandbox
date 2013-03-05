@@ -29,5 +29,5 @@ task :parser2 do
   json = File.read('data/employee_department.json')
   empls = JSON.parse(json)
   
-  pp "The first employee #{empls["employees"].last["first_name"]}"
+  pp "The first employee #{empls["employees"]}"
 end

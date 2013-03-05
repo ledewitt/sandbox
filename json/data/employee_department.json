@@ -11,6 +11,48 @@
       "last_name"  : "Work",
       "department" : "Executive",
       "job"        : "CFO"
+    },
+    {
+      "first_name" : "Inez",
+      "last_name"  : "Rockwell",
+      "department" : "Human Resources",
+      "job"        : "Manager"
+    },
+    {
+      "first_name" : "Kay",
+      "last_name"  : "Mcginn",
+      "department" : "Human Resources",
+      "job"        : "Worker Bee"
+    },
+    {
+      "first_name" : "Larry",
+      "last_name"  : "Conn",
+      "department" : "Human Resources",
+      "job"        : "Worker Bee"
+    },
+    {
+      "first_name" : "Bessie",
+      "last_name"  : "Wolfe",
+      "department" : "Human Resources",
+      "job"        : "Worker Bee"
+    },
+    {
+      "first_name" : "Norman",
+      "last_name"  : "Reece",
+      "department" : "Research and Development",
+      "job"        : "Manager"
+    },
+    {
+      "first_name" : "Betty",
+      "last_name"  : "Prosser",
+      "department" : "Research and Development",
+      "job"        : "Engineer"
+    },
+    {
+      "first_name" : "Jeffrey",
+      "last_name"  : "Barclay",
+      "department" : "Research and Development",
+      "job"        : "Engineer"
     }
   ]
 }
