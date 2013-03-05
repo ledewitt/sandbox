@@ -1,0 +1,16 @@
+{
+  "employees": [
+    {
+      "first_name" : "William",
+      "last_name"  : "Hummel",
+      "department" : "Executive",
+      "job"        : "CEO"
+    },
+    {
+      "first_name" : "Carlos",
+      "last_name"  : "Work",
+      "department" : "Executive",
+      "job"        : "CFO"
+    }
+  ]
+}

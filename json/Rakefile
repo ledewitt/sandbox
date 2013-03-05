@@ -3,12 +3,12 @@ require          'sinatra'
 require          'sinatra/activerecord/rake'
 require          'json'
 require          'pp'
-# require_relative 'config/database'
+require_relative 'config/database'
 
 desc "Launch a console with our environment loaded"
 task :console do
   require          'irb'
-  require_relative 'lib/blog'
+  require_relative 'lib/json'
   ARGV.clear
   $PROGRAM_NAME = 'irb'
   IRB.start
@@ -22,5 +22,12 @@ task :parser do
   
   pp "The CFO is: #{empls["CFO"]}"
   
-  pp "The people in HR are: #{empls["Human Resources"]}"
+  pp "The people in HR are: #{empls["Human Resources"][0]}"
+end
+
+task :parser2 do
+  json = File.read('data/employee_department.json')
+  empls = JSON.parse(json)
+  
+  pp "The first employee #{empls["employees"].last["first_name"]}"
 end
