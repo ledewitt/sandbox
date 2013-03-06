@@ -17,28 +17,15 @@ end
 
 task :importer do
   data = JSON.parse(File.read('data/employee_department.json'))
-  
-  # data["employees"].each do |empl|
-  #     # puts empl
-  #     puts "First name: #{empl["first_name"]}"
-  #   end
-      
-  # puts data["employees"][0]
-  # puts data["employees"].size
-  # puts "There are #{data["employess"].count} employees"
-  
-  data["employees"].each_with_index do |empl,i|
+
+  data["employees"].each do |empl|
     unless Json::Employee.find_by_first_name(empl["first_name"])
-      puts "Index #{i}"
-      puts "First name: #{empl["first_name"]}"
-      puts "Last name: #{empl["last_name"]}"
-      puts "Department: #{empl["department"]}"
-      puts "Job: #{empl["job"]}"
-      puts
+      
+      Json::Employee.create(first_name: empl["first_name"],
+                            last_name:  empl["last_name"],
+                            department: empl["department"],
+                            job:        empl["job"])
     end
-    # Jason::Employee.create(name:           params[:name],
-    #                           plate_position: params[:plate_position],
-    #                           score:          params[:score])
   end
 end
   
