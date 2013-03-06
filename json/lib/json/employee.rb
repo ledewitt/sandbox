@@ -1,4 +1,4 @@
-module Jason
+module Json
   class Employee < ActiveRecord::Base
     
     validates_presence_of :first_name,
