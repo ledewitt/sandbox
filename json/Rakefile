@@ -28,7 +28,7 @@ task :importer do
     end
   end
 end
-  
+
 
 # task :parser do
 #   json = File.read('data/employees.json')

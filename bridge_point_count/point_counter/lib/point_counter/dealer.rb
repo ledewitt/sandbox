@@ -15,6 +15,7 @@ module PointCount
    end
    
    def deal(deck)
+     deck.shuffle
      @north = deck.pop(13)
      @east  = deck.pop(13)
      @south = deck.pop(13)
